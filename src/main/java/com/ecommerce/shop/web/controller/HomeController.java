@@ -14,7 +14,7 @@ public class HomeController {
     @Autowired
     ProductService productServiceImpl;
 
-    @GetMapping(value ={"/", "/index"})
+    @GetMapping("/index")
     public String getIndex(Model model){
         List<Product> productList = productServiceImpl.findAll();
         model.addAttribute("products",productList);
